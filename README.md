@@ -1,5 +1,9 @@
 # 🧠 SmartQuizzer - Adaptive AI-Based Quiz Generator
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]https://infosys-virtual-internship-32srcncakjzdmr4kptul2y.streamlit.app/
+> 🔗 **Live Demo:** [Click here to try the app]
+https://infosys-virtual-internship-32srcncakjzdmr4kptul2y.streamlit.app/
+
 An AI-powered adaptive quiz generator that analyzes study materials and automatically generates relevant quiz questions using NLP and LLMs. Built with Streamlit for an interactive web experience.
 
 ## 🎯 Features
