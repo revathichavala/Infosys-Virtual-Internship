@@ -34,28 +34,12 @@ An AI-powered adaptive quiz generator that analyzes study materials and automati
 
 ## 🛠️ Skills Demonstrated
 
-- Python Scripting
-- Natural Language Processing (NLP)
-- Large Language Models (LLMs)
-- Prompt Engineering
-- Streamlit Web Application Development
 - MongoDB/JSON Data Storage
 - Data Visualization (Plotly)
-- API Integration (OpenAI/Google Gemini/Groq)
-
-## 🌍 Domain
-
 - Education Technology (EdTech)
 - E-Learning & Assessment Systems
-- Artificial Intelligence & NLP
-- Adaptive Learning Platforms
-
-## 📦 Installation
-
 ### 1. Clone the Repository
 
-```bash
-git clone https://github.com/yourusername/smartquizzer.git
 cd smartquizzer
 ```
 
@@ -125,16 +109,9 @@ SmartQuizzer/
 ```
 
 ## 🎮 How to Use
-
-1. **📚 Upload Content**: Upload PDF/text, paste content, or enter article URL
-2. **⚙️ Configure Settings**: Set question count, types, and timer duration
-3. **🔑 Review Concepts**: See AI-extracted key concepts before starting
 4. **🎯 Take Quiz**: Answer questions with adaptive difficulty & timer
 5. **📊 View Results**: Analyze performance with detailed charts
 6. **📜 Track History**: Review past attempts and track improvement
-
-## 🔧 Adaptive Algorithm
-
 ```python
 # Difficulty adjustment logic
 if last_3_correct >= 3:

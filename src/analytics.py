@@ -10,7 +10,7 @@ import streamlit as st
 
 # Import logger
 try:
-    from logger import get_analytics_logger
+    from  src.logger import get_analytics_logger
     logger = get_analytics_logger()
 except ImportError:
     import logging

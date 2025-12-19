@@ -4,7 +4,7 @@ Quiz Engine - Handles adaptive difficulty and answer checking
 
 # Import logger
 try:
-    from logger import get_engine_logger
+    from src.logger import get_engine_logger
     logger = get_engine_logger()
 except ImportError:
     import logging

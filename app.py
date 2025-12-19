@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), ".")))
 """
 AI Smart Quiz - Adaptive AI-Based Quiz Generator
 Streamlit Application
@@ -12,10 +15,10 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-from quiz_engine import QuizEngine
-from question_generator import QuestionGenerator
-from analytics import QuizAnalytics
-from utils import extract_text_from_file, fetch_article_content
+from src.quiz_engine import QuizEngine
+from src.question_generator import QuestionGenerator
+from src.analytics import QuizAnalytics
+from src.utils import extract_text_from_file, fetch_article_content
 
 # Page configuration
 st.set_page_config(
@@ -24,6 +27,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# (debug removed)
 
 # Custom CSS
 st.markdown("""
@@ -960,6 +965,8 @@ def render_upload_stage():
                     st.session_state.current_stage = 'concepts'
                     st.balloons()  # Celebrate success!
                     st.rerun()
+                elif st.session_state.current_stage == 'history':
+                    render_history_stage()
                 else:
                     st.error("😕 Oops! We couldn't generate questions from this content. Try adding more text or using different material.")
             else:
@@ -971,19 +978,24 @@ def render_concepts_stage():
     st.markdown('<p class="sub-header">AI has identified these main concepts from your material</p>', unsafe_allow_html=True)
     
     col1, col2, col3 = st.columns([1, 2, 1])
-    
+
     with col2:
+        # Optionally, show Results button if on history page and last results exist
+        if st.session_state.current_stage == 'history' and hasattr(st.session_state, 'user_answers') and st.session_state.user_answers:
+            if st.button("⬅️ Back to Results", use_container_width=True):
+                st.session_state.current_stage = 'results'
+                st.rerun()
         # Display key concepts
         if st.session_state.key_concepts:
             st.markdown("""
             <div class="concepts-card">
                 <h4 style="margin: 0 0 1rem 0; color: #0369a1;">📚 Main Topics & Concepts</h4>
             """, unsafe_allow_html=True)
-            
+
             concepts_html = ""
             for concept in st.session_state.key_concepts:
                 concepts_html += f'<span class="concept-tag">{concept}</span>'
-            
+
             st.markdown(f"""
                 <div style="line-height: 2.5;">
                     {concepts_html}
@@ -1533,34 +1545,42 @@ def render_history_stage():
 with st.sidebar:
     st.markdown("""
     <div style="text-align: center; padding: 1rem 0;">
-        <span style="font-size: 2.5rem;">🧠</span>
-        <h2 style="margin: 0.5rem 0 0 0; font-size: 1.5rem;">AI Smart Quiz</h2>
-        <p style="font-size: 0.85rem; opacity: 0.8; margin-top: 0.25rem;">Powered by AI</p>
+        <h2 style="margin: 0.25rem 0 0 0; font-size: 1.25rem;">AI Smart Quiz</h2>
+        <p style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.25rem;">Powered by AI</p>
     </div>
     """, unsafe_allow_html=True)
-    
+
     st.markdown("---")
-    
-    # Navigation buttons
-    if st.session_state.current_stage != 'upload':
-        st.markdown('<div class="back-home-btn">', unsafe_allow_html=True)
-        if st.button("🏠 Back to Home", use_container_width=True):
+
+    # Back to Home (only when not on upload)
+    if st.session_state.get('current_stage', 'upload') != 'upload':
+        if st.button("Back to Home", use_container_width=True):
             reset_quiz()
             st.rerun()
-        st.markdown('</div>', unsafe_allow_html=True)
-        st.markdown("<div style='height: 0.5rem;'></div>", unsafe_allow_html=True)
-    
-    if st.session_state.current_stage != 'history':
-        if st.button("📜 View History", use_container_width=True):
-            st.session_state.current_stage = 'history'
-            st.rerun()
-    
-    st.markdown("<div style='height: 1rem;'></div>", unsafe_allow_html=True)
-    
+
+    # View History button (emoji label)
+    if st.button("📜 View History", use_container_width=True):
+        st.session_state.current_stage = 'history'
+        st.rerun()
+
+    # Helper: add a demo history entry so you can see the history page populated
+    if st.button("Add demo history", use_container_width=True):
+        demo_answers = [
+            {'is_correct': True, 'response_time': 8.2, 'topic': 'Topic A', 'difficulty': 'easy'},
+            {'is_correct': False, 'response_time': 12.5, 'topic': 'Topic B', 'difficulty': 'medium'},
+            {'is_correct': True, 'response_time': 9.0, 'topic': 'Topic A', 'difficulty': 'hard'},
+            {'is_correct': True, 'response_time': 7.4, 'topic': 'Topic C', 'difficulty': 'medium'},
+            {'is_correct': False, 'response_time': 15.0, 'topic': 'Topic B', 'difficulty': 'hard'}
+        ]
+        results = st.session_state.analytics.calculate_results(demo_answers)
+        st.session_state.analytics.save_to_history(results, demo_answers)
+        st.success("Demo history entry added.")
+        st.rerun()
+
     st.markdown("""
-    <div style="padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 0.75rem; margin-bottom: 1rem;">
-        <h4 style="margin: 0 0 0.75rem 0; font-size: 0.9rem; opacity: 0.9;">📖 How it works</h4>
-        <ol style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; line-height: 1.8; opacity: 0.85;">
+    <div style="padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 0.5rem; margin-top: 1rem;">
+        <h4 style="margin: 0 0 0.5rem 0; font-size: 0.85rem;">How it works</h4>
+        <ol style="margin: 0; padding-left: 1.25rem; font-size: 0.8rem; line-height: 1.6; opacity: 0.9;">
             <li>Upload your study material</li>
             <li>AI extracts key concepts</li>
             <li>AI generates quiz questions</li>
@@ -1569,30 +1589,31 @@ with st.sidebar:
         </ol>
     </div>
     """, unsafe_allow_html=True)
-    
-    st.markdown("""
-    <div style="padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 0.75rem;">
-        <h4 style="margin: 0 0 0.75rem 0; font-size: 0.9rem; opacity: 0.9;">✨ Features</h4>
-        <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.85rem; line-height: 1.8; opacity: 0.85;">
-            <li>🤖 AI-powered questions</li>
-            <li>📈 Adaptive difficulty</li>
-            <li>⏱️ Countdown timer</li>
-            <li>🔗 URL article support</li>
-            <li>📊 Detailed analytics</li>
-            <li>📜 Quiz history</li>
-            <li>💡 Smart recommendations</li>
-        </ul>
-    </div>
-    """, unsafe_allow_html=True)
 
-# Main content
-if st.session_state.current_stage == 'upload':
-    render_upload_stage()
-elif st.session_state.current_stage == 'concepts':
-    render_concepts_stage()
-elif st.session_state.current_stage == 'quiz':
-    render_quiz_stage()
-elif st.session_state.current_stage == 'results':
-    render_results_stage()
-elif st.session_state.current_stage == 'history':
-    render_history_stage()
+    # Show current stage for debugging (visible in sidebar)
+    try:
+        st.markdown(f"**Current stage:** {st.session_state.get('current_stage', 'unset')}")
+    except Exception:
+        st.markdown("**Current stage:** unknown")
+
+# Main content dispatcher
+if 'current_stage' not in st.session_state:
+    st.session_state.current_stage = 'upload'
+
+try:
+    if st.session_state.current_stage == 'upload':
+        render_upload_stage()
+    elif st.session_state.current_stage == 'concepts':
+        render_concepts_stage()
+    elif st.session_state.current_stage == 'quiz':
+        render_quiz_stage()
+    elif st.session_state.current_stage == 'results':
+        render_results_stage()
+    elif st.session_state.current_stage == 'history':
+        render_history_stage()
+    else:
+        st.info(f"Unknown stage: {st.session_state.current_stage}")
+except Exception as e:
+    import traceback
+    st.error("Error while rendering page — see traceback below.")
+    st.text(traceback.format_exc())

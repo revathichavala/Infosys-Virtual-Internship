@@ -7,7 +7,7 @@ from typing import Optional
 
 # Import logger
 try:
-    from logger import get_utils_logger
+    from  src.logger import get_utils_logger
     logger = get_utils_logger()
 except ImportError:
     import logging

@@ -9,7 +9,7 @@ from datetime import datetime
 
 # Import logger
 try:
-    from logger import get_database_logger
+    from src.logger import get_database_logger
     logger = get_database_logger()
 except ImportError:
     import logging

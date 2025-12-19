@@ -1,0 +1,105 @@
+2025-12-19 00:37:08 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 00:37:08 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 00:37:08 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 00:37:40 | [32mINFO[0m | SmartQuiz.Utils | extract_text_from_file:21 | Extracting text from file: e-business.pdf (type: application/pdf)
+2025-12-19 00:38:01 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 00:38:01 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 00:38:01 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 00:38:20 | [32mINFO[0m | SmartQuiz.Utils | extract_text_from_file:21 | Extracting text from file: unit-3.pdf (type: application/pdf)
+2025-12-19 00:39:05 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 5 answers
+2025-12-19 00:39:05 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 4/5 (80% accuracy)
+2025-12-19 00:39:39 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 5 answers
+2025-12-19 00:39:39 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 4/5 (80% accuracy)
+2025-12-19 00:39:43 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 5 answers
+2025-12-19 00:39:43 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 4/5 (80% accuracy)
+2025-12-19 00:39:58 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 5 answers
+2025-12-19 00:39:58 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 4/5 (80% accuracy)
+2025-12-19 00:40:17 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 00:40:17 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 00:40:17 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 00:43:33 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 00:43:33 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 00:43:33 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 00:43:34 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 00:43:59 | [32mINFO[0m | SmartQuiz.Utils | extract_text_from_file:21 | Extracting text from file: unit-3.pdf (type: application/pdf)
+2025-12-19 00:44:44 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 6 answers
+2025-12-19 00:44:44 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 3/6 (50% accuracy)
+2025-12-19 00:44:55 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 6 answers
+2025-12-19 00:44:55 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 3/6 (50% accuracy)
+2025-12-19 01:00:55 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:00:55 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:00:55 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:00:56 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:02:25 | [32mINFO[0m | SmartQuiz.Utils | extract_text_from_file:21 | Extracting text from file: unit-3.pdf (type: application/pdf)
+2025-12-19 01:03:04 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 6 answers
+2025-12-19 01:03:04 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 2/6 (33% accuracy)
+2025-12-19 01:03:11 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 6 answers
+2025-12-19 01:03:11 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 2/6 (33% accuracy)
+2025-12-19 01:05:00 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 6 answers
+2025-12-19 01:05:00 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 2/6 (33% accuracy)
+2025-12-19 01:12:26 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:12:26 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:12:26 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:12:27 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:12:32 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:12:32 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:12:32 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:12:33 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:12:36 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:12:36 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:12:36 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:12:37 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:12:40 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:12:40 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:12:40 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:12:41 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:12:44 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:12:44 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:12:44 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:12:45 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:12:48 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:12:48 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:12:48 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:12:49 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:13:59 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:13:59 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:13:59 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:14:00 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:17:39 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:17:39 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:17:39 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:17:40 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:17:43 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:17:43 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:17:43 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:17:44 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:18:02 | [32mINFO[0m | SmartQuiz.Utils | extract_text_from_file:21 | Extracting text from file: unit-4.pdf (type: application/pdf)
+2025-12-19 01:18:35 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 5 answers
+2025-12-19 01:18:35 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 2/5 (40% accuracy)
+2025-12-19 01:18:55 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 5 answers
+2025-12-19 01:18:55 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 2/5 (40% accuracy)
+2025-12-19 01:24:09 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:24:09 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:24:09 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:24:10 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:24:37 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 01:24:37 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 01:24:37 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 01:24:38 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 01:25:36 | [32mINFO[0m | SmartQuiz.Utils | extract_text_from_file:21 | Extracting text from file: e-business.pdf (type: application/pdf)
+2025-12-19 01:26:31 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 5 answers
+2025-12-19 01:26:31 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 4/5 (80% accuracy)
+2025-12-19 01:26:39 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:34 | Calculating results for 5 answers
+2025-12-19 01:26:39 | [32mINFO[0m | SmartQuiz.Analytics | calculate_results:52 | Quiz results: 4/5 (80% accuracy)
+2025-12-19 07:39:05 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 07:39:05 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 07:39:05 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 07:39:06 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 07:41:25 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 07:41:25 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 07:41:25 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 07:41:26 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized
+2025-12-19 07:41:30 | [32mINFO[0m | SmartQuiz.Engine | __init__:17 | QuizEngine initialized
+2025-12-19 07:41:30 | [32mINFO[0m | SmartQuiz.Generator | __init__:36 | Initializing QuestionGenerator...
+2025-12-19 07:41:30 | [32mINFO[0m | SmartQuiz.Generator | __init__:46 | Using Groq API for question generation
+2025-12-19 07:41:30 | [32mINFO[0m | SmartQuiz.Analytics | __init__:30 | QuizAnalytics initialized

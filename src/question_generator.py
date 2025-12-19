@@ -8,12 +8,14 @@ import random
 from typing import List, Dict, Optional
 
 # Import logger
+# Import logger
 try:
-    from logger import get_generator_logger
+    from src.logger import get_generator_logger
     logger = get_generator_logger()
 except ImportError:
     import logging
     logger = logging.getLogger(__name__)
+
 
 # Try to import OpenAI, fall back to sample questions if not available
 try:
