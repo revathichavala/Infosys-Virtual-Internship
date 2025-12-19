@@ -1,8 +1,8 @@
-# 🧠 SmartQuizzer - Adaptive AI-Based Quiz Generator
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]https://infosys-virtual-internship-32srcncakjzdmr4kptul2y.streamlit.app/
-> 🔗 **Live Demo:** [Click here to try the app]
-https://infosys-virtual-internship-32srcncakjzdmr4kptul2y.streamlit.app/
+# 🧠 Infosys-AI-Smart-Quiz - Adaptive AI-Based Quiz Generator
+
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://infosys-virtual-internship-32srcncakjzdmr4kptul2y.streamlit.app/)
+> 🔗 **Live Demo:** [Click here to try the app](https://infosys-virtual-internship-32srcncakjzdmr4kptul2y.streamlit.app/)
 
 An AI-powered adaptive quiz generator that analyzes study materials and automatically generates relevant quiz questions using NLP and LLMs. Built with Streamlit for an interactive web experience.
 
@@ -38,9 +38,12 @@ An AI-powered adaptive quiz generator that analyzes study materials and automati
 - Data Visualization (Plotly)
 - Education Technology (EdTech)
 - E-Learning & Assessment Systems
+
 ### 1. Clone the Repository
 
-cd smartquizzer
+```bash
+git clone https://github.com/revathichavala/Infosys-AI-Smart-Quiz.git
+cd Infosys-Virtual-Internship
 ```
 
 ### 2. Create Virtual Environment
@@ -50,7 +53,6 @@ python -m venv venv
 
 # Windows
 venv\Scripts\activate
-
 # macOS/Linux
 source venv/bin/activate
 ```
@@ -91,22 +93,27 @@ streamlit run app.py
 
 Access at `http://localhost:8501`
 
+
 ## 📁 Project Structure
 
 ```
-SmartQuizzer/
+Infosys-Virtual-Internship/
 ├── app.py                    # Main Streamlit application
-├── quiz_engine.py            # Adaptive difficulty & answer checking
-├── question_generator.py     # AI question generation & concept extraction
-├── analytics.py              # Performance analytics & visualization
-├── database.py               # MongoDB & JSON storage handler
-├── utils.py                  # File handling & URL fetching
+├── src/                      # All core modules
+│   ├── analytics.py
+│   ├── database.py
+│   ├── logger.py
+│   ├── question_generator.py
+│   ├── quiz_engine.py
+│   └── utils.py
 ├── requirements.txt          # Python dependencies
-├── Procfile                  # Heroku deployment
+├── quiz_history.json         # Local quiz history (ignored by git)
 ├── runtime.txt               # Python version
 ├── setup.sh                  # Deployment setup
 └── README.md                 # Documentation
 ```
+
+> **Note:** All main logic is inside the `src/` folder. `quiz_history.json` is used for local history and is ignored by git.
 
 ## 🎮 How to Use
 4. **🎯 Take Quiz**: Answer questions with adaptive difficulty & timer
